@@ -48,9 +48,11 @@ ggplot(fin, aes(x = gdp, y = percent, color = gini, label = Country.Name)) +
     title = "GDP(PPP) y %PEA",
     subtitle = "GINI y felicidad",
     x = "", y = "", color = "GINI",
-    caption = "Fuente: Datos del Banco Mundial\nWorl Happiness Report"
+    caption = "Fuente: Datos del Banco Mundial\nWorld Happiness Report"
   ) +
   guides(size = F) +
   theme_bw() +
   theme(legend.position = "bottom")
-ggsave("Grafica_dia_3.png", path = out, dpi = 300)  
+ggsave("Grafica_dia_3.png", path = out, dpi = 300, width = 12, height = 10)  
+
+
