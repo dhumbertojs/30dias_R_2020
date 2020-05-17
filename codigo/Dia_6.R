@@ -25,7 +25,7 @@ data <- mun %>%
     ymax = cumsum(fraction),
     ymin = c(0, head(ymax, n=-1)),
     labelPosition = (ymax + ymin) / 2,
-    label = paste0(X2019, "\n value: ", count)
+    label = paste0(X2019, "\nMunicipios:", count)
   ) %>% 
   filter(Estado == "Estado_de_Mexico")
 
@@ -54,3 +54,4 @@ ggplot(data, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=X2019)) +
     subtitle = "Estado de México, 2019",
     caption = "Fuente: Centro de Estudios Alonso Lujambio"
   )
+ggsave("Grafica_dia_6.png", path = out, dpi = 300)
